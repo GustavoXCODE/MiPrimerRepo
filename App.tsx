@@ -1,54 +1,40 @@
-import React from 'react';
-import {View, Text, StyleSheet, TextInput, TouchableOpacity, Dimensions} from 'react-native';
+import React from "react";
+import { View, Text, StyleSheet, TextInput} from "react-native";
 
 export default function App () {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Mis tareas por hacer</Text>
-      <View style={styles.inputContainer}>
-        <TextInput placeholder='Agregar una nueva tarea'style={styles.textInput}/>
-        <TouchableOpacity style={styles.addButton}>
-          <Text style={styles.whiteText}>Agregar</Text>
-        </TouchableOpacity>
-      </View>
+      <Text style={styles.titulo}>Login</Text>
+      <Text style={styles.subtitulo}>Sign In to your account</Text>
+      <TextInput placeholder="example@gmail.com" style={styles.textInput} />
+      <TextInput placeholder="password" style={styles.textInput} secureTextEntry={true}/>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    width: "100%",
-    padding: 20
+    flex: 1,
+    backgroundColor: '#f1f1f1',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  title: {
+  titulo: {
+    fontSize: 80,
+    color: '#34434D',
+    fontWeight: 'bold',
+  },
+  subtitulo: {
     fontSize: 20,
-    color: 'grey',
-  },
-  text: {
-    fontSize: 16,
-    color: 'black',
-  },
-  whiteText: {
-    fontSize: 14,
-    color: 'white'
+    color: 'gray',
   },
   textInput: {
-    borderColor: 'grey',
-    borderWidth: 1,
-    width: Dimensions.get('screen').width * 0.6,
-    borderRadius: 10,
-    paddingLeft: 15,
-  },
-  inputContainer: {
+    borderRadius: 30,
+    padding: 10,
+    width: '80%',
+    height: 50,
     marginTop: 20,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  addButton: {
-    width: Dimensions.get('screen').width * 0.25,
-    backgroundColor: '#5897fb',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 10,    
-  },
-});
+    backgroundColor: 'white',
+    paddingStart: 30,
+  }
+})
