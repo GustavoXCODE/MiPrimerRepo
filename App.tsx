@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, TextInput} from "react-native";
+import { View, Text, StyleSheet, TextInput, TouchableOpacity} from "react-native";
 
 export default function App () {
   return (
@@ -8,6 +8,9 @@ export default function App () {
       <Text style={styles.subtitulo}>Sign In to your account</Text>
       <TextInput placeholder="example@gmail.com" style={styles.textInput} />
       <TextInput placeholder="password" style={styles.textInput} secureTextEntry={true}/>
+      <TouchableOpacity style={styles.touchableOpacityButtom}>
+        <Text style={styles.textButtom}>Sign up</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -15,7 +18,7 @@ export default function App () {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'green',
+    backgroundColor: '#f1f1f1',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -36,5 +39,18 @@ const styles = StyleSheet.create({
     marginTop: 20,
     backgroundColor: 'white',
     paddingStart: 30,
+  },
+  touchableOpacityButtom: {
+    backgroundColor: 'dodgerblue',
+    marginTop: 40,
+    width: '20%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 50,
+    borderRadius: 10,
+  },
+  textButtom: {
+    color: 'white',
+    fontSize: 15
   }
 })
